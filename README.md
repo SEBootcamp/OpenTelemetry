@@ -93,7 +93,7 @@ to reverse proxy the traffic from Nginx to our sample Node.js application.  Firs
         location / {
             proxy_set_header   X-Forwarded-For $remote_addr;
             proxy_set_header   Host $http_host;
-            proxy_pass         "http://127.0.0.1:8080";
+            proxy_pass         "http://127.0.0.1:9000";
         }
     }
     ``` 
