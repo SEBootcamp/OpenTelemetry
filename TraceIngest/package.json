@@ -1,0 +1,20 @@
+{
+  "name": "traceingest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.23.0",
+    "@opentelemetry/exporter-collector-proto": "^0.23.0",
+    "@opentelemetry/instrumentation": "^0.23.0",
+    "@opentelemetry/node": "^0.23.0",
+    "@opentelemetry/tracing": "^0.23.0",
+    "express": "^4.17.1"
+  }
+}
