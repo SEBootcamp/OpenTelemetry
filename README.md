@@ -5,19 +5,19 @@ export INSTANCE_NAME=YOURNAME
 ```
 
 ```$xslt
-gcloud beta compute --project=sales-engineering-noram instances create $INSTANCE_NAME --zone=us-central1-a --machine-type=e2-medium --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=670246978281-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server,https-server --image=ubuntu-2004-focal-v20210720 --image-project=ubuntu-os-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=wmsoteltest --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
+gcloud beta compute --project=$(gcloud config get-value project) instances create $INSTANCE_NAME --zone=us-central1-a --machine-type=e2-medium --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE --service-account=670246978281-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --tags=http-server,https-server --image=ubuntu-2004-focal-v20210720 --image-project=ubuntu-os-cloud --boot-disk-size=10GB --boot-disk-type=pd-balanced --boot-disk-device-name=wmsoteltest --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --reservation-affinity=any
 ```
 
 Navigate to Compute Engine and find your instance name and click the SSH button to open a new popup terminal window.
 
 Once successfully connected to your VM, clone the GitHub repository:
 ```$xslt
-git clone https://github.com/SEBootcamp/OpenTel.git
+git clone https://github.com/SEBootcamp/OpenTelemetry.git
 ```
 
 Navigate into the downloaded OpenTel directory
 ```$xslt
-cd ~/OpenTel
+cd ~/OpenTelemetry
 ```
 
 Execute the setupenv.sh script to download a few dependencies we'll need.
